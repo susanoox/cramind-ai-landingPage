@@ -16,7 +16,7 @@ export function TrustBadge({ icon, text, className }: TrustBadgeProps) {
          )}
       >
          <span className='text-2xl'>{icon}</span>
-         <span className='text-sm font-medium text-white text-center'>
+         <span className='text-sm font-medium text-primary text-center'>
             {text}
          </span>
       </div>

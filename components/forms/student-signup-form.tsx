@@ -63,7 +63,7 @@ export function StudentSignupForm({ onSuccess }: StudentSignupFormProps) {
    if (submitSuccess) {
       return (
          <div className='text-center py-8'>
-            <div className='w-16 h-16 bg-success-green rounded-full flex items-center justify-center mx-auto mb-4'>
+            <div className='w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4'>
                <span className='text-white text-3xl'>✓</span>
             </div>
             <h3 className='text-2xl font-bold text-gray-900 mb-2'>Success!</h3>
@@ -76,30 +76,64 @@ export function StudentSignupForm({ onSuccess }: StudentSignupFormProps) {
 
    return (
       <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-         <Input
-            label='Full Name'
-            {...register("fullName")}
-            error={errors.fullName?.message}
-            required
-            placeholder='John Doe'
-         />
+         <div className='space-y-2'>
+            <label
+               htmlFor='fullName'
+               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+            >
+               Full Name <span className='text-destructive'>*</span>
+            </label>
+            <Input
+               id='fullName'
+               {...register("fullName")}
+               placeholder='John Doe'
+            />
+            {errors.fullName && (
+               <p className='text-sm font-medium text-destructive'>
+                  {errors.fullName.message}
+               </p>
+            )}
+         </div>
 
-         <Input
-            label='Email Address'
-            type='email'
-            {...register("email")}
-            error={errors.email?.message}
-            required
-            placeholder='john@example.com'
-         />
+         <div className='space-y-2'>
+            <label
+               htmlFor='email'
+               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+            >
+               Email Address <span className='text-destructive'>*</span>
+            </label>
+            <Input
+               id='email'
+               type='email'
+               {...register("email")}
+               placeholder='john@example.com'
+            />
+            {errors.email && (
+               <p className='text-sm font-medium text-destructive'>
+                  {errors.email.message}
+               </p>
+            )}
+         </div>
 
-         <Input
-            label='Phone Number'
-            type='tel'
-            {...register("phone")}
-            error={errors.phone?.message}
-            placeholder='+91 98765 43210'
-         />
+         <div className='space-y-2'>
+            <label
+               htmlFor='phone'
+               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+            >
+               Phone Number
+            </label>
+            <Input
+               id='phone'
+               type='tel'
+               {...register("phone")}
+               placeholder='+91 98765 43210'
+            />
+            {errors.phone && (
+               <p className='text-sm font-medium text-destructive'>
+                  {errors.phone.message}
+               </p>
+            )}
+         </div>
 
          <Select
             label='Target Exam'
@@ -115,13 +149,20 @@ export function StudentSignupForm({ onSuccess }: StudentSignupFormProps) {
             ))}
          </Select>
 
-         <Input
-            label='Exam Date'
-            type='date'
-            {...register("examDate")}
-            error={errors.examDate?.message}
-            required
-         />
+         <div className='space-y-2'>
+            <label
+               htmlFor='examDate'
+               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+            >
+               Exam Date <span className='text-destructive'>*</span>
+            </label>
+            <Input id='examDate' type='date' {...register("examDate")} />
+            {errors.examDate && (
+               <p className='text-sm font-medium text-destructive'>
+                  {errors.examDate.message}
+               </p>
+            )}
+         </div>
 
          <Checkbox
             label='I agree to Terms & Privacy Policy'
@@ -135,7 +176,7 @@ export function StudentSignupForm({ onSuccess }: StudentSignupFormProps) {
             </div>
          )}
 
-         <Button type='submit' size='lg' fullWidth disabled={isSubmitting}>
+         <Button type='submit' size='lg' disabled={isSubmitting}>
             {isSubmitting ? "Creating Account..." : "Start Free Trial"}
          </Button>
 
@@ -143,7 +184,7 @@ export function StudentSignupForm({ onSuccess }: StudentSignupFormProps) {
             Already have an account?{" "}
             <a
                href='/signin'
-               className='text-ai-blue hover:underline font-medium'
+               className='text-primary hover:underline font-medium'
             >
                Sign In
             </a>

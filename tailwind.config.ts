@@ -9,34 +9,44 @@ const config: Config = {
    theme: {
       extend: {
          colors: {
-            "ai-blue": {
-               DEFAULT: "#1E40AF",
-               50: "#EFF6FF",
-               100: "#DBEAFE",
-               500: "#3B82F6",
-               900: "#1E40AF",
+            border: "var(--border)",
+            input: "var(--input)",
+            ring: "var(--ring)",
+            background: "var(--background)",
+            foreground: "var(--foreground)",
+            primary: {
+               DEFAULT: "var(--primary)",
+               foreground: "var(--primary-foreground)",
             },
-            "vibrant-purple": {
-               DEFAULT: "#7C3AED",
-               50: "#FAF5FF",
-               500: "#8B5CF6",
-               900: "#7C3AED",
+            secondary: {
+               DEFAULT: "var(--secondary)",
+               foreground: "var(--secondary-foreground)",
             },
-            "success-green": {
-               DEFAULT: "#10B981",
-               50: "#ECFDF5",
-               500: "#10B981",
+            destructive: {
+               DEFAULT: "var(--destructive)",
+               foreground: "var(--destructive-foreground)",
             },
-            "energy-orange": "#F59E0B",
-            "confidence-gold": "#FBBF24",
+            muted: {
+               DEFAULT: "var(--muted)",
+               foreground: "var(--muted-foreground)",
+            },
+            accent: {
+               DEFAULT: "var(--accent)",
+               foreground: "var(--accent-foreground)",
+            },
+            popover: {
+               DEFAULT: "var(--popover)",
+               foreground: "var(--popover-foreground)",
+            },
+            card: {
+               DEFAULT: "var(--card)",
+               foreground: "var(--card-foreground)",
+            },
          },
-         backgroundImage: {
-            "gradient-primary":
-               "linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%)",
-            "gradient-success":
-               "linear-gradient(135deg, #10B981 0%, #1E40AF 100%)",
-            "gradient-energy":
-               "linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)",
+         borderRadius: {
+            lg: "var(--radius)",
+            md: "calc(var(--radius) - 2px)",
+            sm: "calc(var(--radius) - 4px)",
          },
          fontFamily: {
             sans: ["Inter", "system-ui", "sans-serif"],

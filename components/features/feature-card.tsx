@@ -37,7 +37,7 @@ export function FeatureCard({
             )}
 
             {/* Icon */}
-            <div className='mb-6 text-ai-blue text-4xl'>{icon}</div>
+            <div className='mb-6 text-primary text-4xl'>{icon}</div>
 
             {/* Title */}
             <h3 className='text-2xl font-semibold mb-3 text-gray-900'>
@@ -52,7 +52,7 @@ export function FeatureCard({
                <ul className='space-y-2 mt-4'>
                   {features.map((feature, idx) => (
                      <li key={idx} className='flex items-start gap-2'>
-                        <Check className='w-5 h-5 text-success-green mt-0.5 shrink-0' />
+                        <Check className='w-5 h-5 text-accent mt-0.5 shrink-0' />
                         <span className='text-sm text-gray-700'>{feature}</span>
                      </li>
                   ))}

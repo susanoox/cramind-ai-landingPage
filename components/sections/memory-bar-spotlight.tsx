@@ -51,7 +51,11 @@ export function MemoryBarSpotlight() {
    return (
       <section
          ref={ref}
-         className='relative py-24 bg-linear-to-br from-ai-blue via-vibrant-purple to-ai-blue overflow-hidden'
+         className='relative py-24 overflow-hidden'
+         style={{
+            background:
+               "linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)",
+         }}
       >
          {/* Background decorations */}
          <div className='absolute inset-0 opacity-10'>
@@ -102,7 +106,7 @@ export function MemoryBarSpotlight() {
             <div className='text-center'>
                <Button
                   size='lg'
-                  variant='white'
+                  variant='outline'
                   onClick={() => scrollToSection("#get-started")}
                >
                   See Your Memory Bar in Action

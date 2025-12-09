@@ -211,8 +211,8 @@ export function BenefitsSection() {
                         onClick={() => setActiveTab(tab)}
                         className={`px-6 py-3 rounded-lg font-medium transition-all ${
                            activeTab === tab
-                              ? "bg-linear-to-r from-ai-blue to-vibrant-purple text-white"
-                              : "text-gray-600 hover:text-gray-900"
+                              ? "bg-primary text-primary-foreground"
+                              : "text-muted-foreground hover:text-foreground"
                         }`}
                      >
                         {tab}
@@ -236,7 +236,7 @@ export function BenefitsSection() {
                <div className='grid md:grid-cols-2 gap-6 mb-12'>
                   {BENEFITS[activeTab].benefits.map((benefit, idx) => (
                      <div key={idx} className='flex items-start gap-3'>
-                        <Check className='w-6 h-6 text-success-green shrink-0 mt-1' />
+                        <Check className='w-6 h-6 text-accent shrink-0 mt-1' />
                         <div>
                            <h4 className='font-semibold text-gray-900 mb-1'>
                               {benefit.title}
@@ -253,7 +253,7 @@ export function BenefitsSection() {
                <Card className='max-w-4xl mx-auto mb-8'>
                   <CardContent className='p-8'>
                      <div className='flex items-start gap-4'>
-                        <div className='w-16 h-16 bg-linear-to-br from-ai-blue to-vibrant-purple rounded-full flex items-center justify-center text-white text-2xl shrink-0'>
+                        <div className='w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl shrink-0'>
                            {BENEFITS[activeTab].testimonial.name[0]}
                         </div>
                         <div className='flex-1'>
@@ -278,7 +278,6 @@ export function BenefitsSection() {
                <div className='text-center'>
                   <Button
                      size='lg'
-                     variant='primary'
                      onClick={() => scrollToSection("#get-started")}
                   >
                      {BENEFITS[activeTab].cta}

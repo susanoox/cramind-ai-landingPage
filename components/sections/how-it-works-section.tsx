@@ -76,7 +76,7 @@ export function HowItWorksSection() {
 
             {/* Desktop Timeline */}
             <div className='hidden md:block relative'>
-               <div className='absolute top-24 left-0 right-0 h-1 bg-linear-to-r from-ai-blue via-vibrant-purple to-success-green' />
+               <div className='absolute top-24 left-0 right-0 h-1 bg-primary' />
 
                <div className='grid grid-cols-4 gap-8'>
                   {STEPS.map((step, idx) => (
@@ -101,7 +101,7 @@ export function HowItWorksSection() {
                            </div>
 
                            {/* Icon */}
-                           <div className='text-ai-blue mb-4'>{step.icon}</div>
+                           <div className='text-primary mb-4'>{step.icon}</div>
 
                            {/* Title */}
                            <h3 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -109,7 +109,7 @@ export function HowItWorksSection() {
                            </h3>
 
                            {/* Description */}
-                           <p className='text-sm font-medium text-vibrant-purple mb-4'>
+                           <p className='text-sm font-medium text-secondary mb-4'>
                               {step.description}
                            </p>
 
@@ -120,9 +120,7 @@ export function HowItWorksSection() {
                                     key={detailIdx}
                                     className='flex items-start gap-2'
                                  >
-                                    <span className='text-success-green mt-1'>
-                                       •
-                                    </span>
+                                    <span className='text-accent mt-1'>•</span>
                                     <span>{detail}</span>
                                  </li>
                               ))}
@@ -166,11 +164,11 @@ export function HowItWorksSection() {
                      </div>
 
                      <div className='flex-1 pb-8'>
-                        <div className='text-ai-blue mb-2'>{step.icon}</div>
+                        <div className='text-primary mb-2'>{step.icon}</div>
                         <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                            {step.title}
                         </h3>
-                        <p className='text-sm font-medium text-vibrant-purple mb-3'>
+                        <p className='text-sm font-medium text-secondary mb-3'>
                            {step.description}
                         </p>
                         <ul className='text-sm text-gray-600 space-y-1'>
@@ -179,9 +177,7 @@ export function HowItWorksSection() {
                                  key={detailIdx}
                                  className='flex items-start gap-2'
                               >
-                                 <span className='text-success-green mt-1'>
-                                    •
-                                 </span>
+                                 <span className='text-accent mt-1'>•</span>
                                  <span>{detail}</span>
                               </li>
                            ))}

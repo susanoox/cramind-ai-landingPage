@@ -52,7 +52,7 @@ export function Navigation() {
                   href='/'
                   className={cn(
                      "text-2xl font-bold transition-colors",
-                     isScrolled ? "text-ai-blue" : "text-white"
+                     isScrolled ? "text-primary" : "text-black"
                   )}
                >
                   {BRAND.name}
@@ -65,18 +65,14 @@ export function Navigation() {
                         key={link.href}
                         onClick={() => scrollToSection(link.href)}
                         className={cn(
-                           "text-base font-medium transition-colors hover:text-vibrant-purple",
-                           isScrolled ? "text-gray-700" : "text-white"
+                           "text-base font-medium transition-colors hover:text-primary",
+                           isScrolled ? "text-gray-700" : "text-black"
                         )}
                      >
                         {link.label}
                      </button>
                   ))}
-                  <Button
-                     variant='primary'
-                     size='md'
-                     onClick={() => scrollToSection("#get-started")}
-                  >
+                  <Button onClick={() => scrollToSection("#get-started")}>
                      Get Started
                   </Button>
                </div>
@@ -119,11 +115,7 @@ export function Navigation() {
                         </button>
                      ))}
                      <div className='px-4'>
-                        <Button
-                           variant='primary'
-                           fullWidth
-                           onClick={() => scrollToSection("#get-started")}
-                        >
+                        <Button onClick={() => scrollToSection("#get-started")}>
                            Get Started
                         </Button>
                      </div>

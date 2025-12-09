@@ -67,7 +67,7 @@ export function Footer() {
                            href={social.href}
                            target='_blank'
                            rel='noopener noreferrer'
-                           className='w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-vibrant-purple transition-colors text-xs'
+                           className='w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors text-xs'
                            aria-label={social.label}
                         >
                            {social.icon}

@@ -79,8 +79,8 @@ export function CTASection() {
                         onClick={() => setActiveTab(tab)}
                         className={`px-8 py-3 rounded-lg font-medium transition-all ${
                            activeTab === tab
-                              ? "bg-linear-to-r from-ai-blue to-vibrant-purple text-white"
-                              : "text-gray-600 hover:text-gray-900"
+                              ? "bg-primary text-primary-foreground"
+                              : "text-muted-foreground hover:text-foreground"
                         }`}
                      >
                         For {tab}
@@ -114,7 +114,7 @@ export function CTASection() {
                   <div className='space-y-3 mb-8'>
                      {BENEFITS[activeTab].map((benefit, idx) => (
                         <div key={idx} className='flex items-start gap-3'>
-                           <Check className='w-5 h-5 text-success-green shrink-0 mt-0.5' />
+                           <Check className='w-5 h-5 text-accent shrink-0 mt-0.5' />
                            <span className='text-gray-700'>{benefit}</span>
                         </div>
                      ))}
@@ -125,9 +125,9 @@ export function CTASection() {
                      {TRUST_BADGES[activeTab].map((badge, idx) => (
                         <div
                            key={idx}
-                           className='px-4 py-2 bg-linear-to-r from-ai-blue/10 to-vibrant-purple/10 rounded-lg border border-ai-blue/20'
+                           className='px-4 py-2 bg-primary/10 rounded-lg border border-primary/20'
                         >
-                           <span className='text-sm font-medium text-ai-blue'>
+                           <span className='text-sm font-medium text-primary'>
                               {badge}
                            </span>
                         </div>
