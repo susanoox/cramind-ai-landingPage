@@ -303,12 +303,12 @@ const MemoryBar: React.FC<MemoryBarProps> = ({
                initial={{ width: 0 }}
                animate={{ width: `${displayPercentage}%` }}
                transition={{ duration: 1.5, ease: "easeOut" }}
-               className={`h-full bg-gradient-to-r ${getColor(
+               className={`h-full bg-linear-to-r ${getColor(
                   percentage
                )} shadow-lg`}
             >
                {/* Glow effect */}
-               <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer' />
+               <div className='absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent animate-shimmer' />
             </motion.div>
          </div>
       </div>
